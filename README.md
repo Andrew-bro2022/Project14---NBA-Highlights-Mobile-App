@@ -74,6 +74,8 @@ lib/
    - Smooth navigation to detail pages
 <img src="https://github.com/user-attachments/assets/f8930087-b682-459e-8a2f-b0eeb59c8540" alt="IMG_7029" width="30%">
 <img src="https://github.com/user-attachments/assets/807df89f-7f3c-45eb-bd7d-ec24977ca9c3" alt="IMG_7029" width="35%">
+
+
 <img src="https://github.com/user-attachments/assets/37f8d169-c76c-4261-a8ae-27b82e2ff206" alt="IMG_7029" width="30%">
 <img src="https://github.com/user-attachments/assets/52cce689-8b14-4558-9ff3-0d4ab971bf37" alt="IMG_7029" width="30%">
 
