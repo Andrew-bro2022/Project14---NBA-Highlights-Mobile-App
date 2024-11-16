@@ -17,6 +17,7 @@ class DetailsScreen extends StatefulWidget {
 class _DetailsScreenState extends State<DetailsScreen> {
   late final ApiService _apiService;
   late Future<HighlightResponse> _highlightFuture;
+  String _categoryTitle = '';
 
   @override
   void initState() {
@@ -26,19 +27,26 @@ class _DetailsScreenState extends State<DetailsScreen> {
   }
 
   void _loadHighlights() {
-    // Map IDs to categories
-    final Map<String, String> categoryMap = {
-      '1362': 'player_highlights',
-      '1363': 'dunk_contest',
-      '1364': 'classic_games',
-    };
-
-    // If the ID matches a category, use getHighlightsByCategory
-    if (categoryMap.containsKey(widget.id)) {
-      _highlightFuture = _apiService.getHighlightsByCategory(categoryMap[widget.id]!);
-    } else {
-      // Otherwise, fetch a single highlight
-      _highlightFuture = _apiService.getHighlight(widget.id);
+    switch (widget.id) {
+      case '1361':
+        _categoryTitle = 'Game Highlights';
+        _highlightFuture = _apiService.getGameHighlights();
+        break;
+      case '1362':
+        _categoryTitle = 'Player Highlights';
+        _highlightFuture = _apiService.getPlayerHighlights();
+        break;
+      case '1363':
+        _categoryTitle = 'Dunk Contest';
+        _highlightFuture = _apiService.getDunkContestHighlights();
+        break;
+      case '1364':
+        _categoryTitle = 'Classic Games';
+        _highlightFuture = _apiService.getClassicGamesHighlights();
+        break;
+      default:
+        _categoryTitle = 'NBA Highlights';
+        _highlightFuture = _apiService.getHighlight(widget.id);
     }
   }
 
@@ -46,9 +54,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'NBA Highlights',
-          style: TextStyle(color: Colors.white),
+        title: Text(
+          _categoryTitle,
+          style: const TextStyle(color: Colors.white),
         ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
@@ -63,7 +71,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
           }
 
           if (snapshot.hasError) {
-            return _buildErrorState('Failed to load highlights: ${snapshot.error}');
+            return _buildErrorState('Failed to load highlights');
           }
 
           if (!snapshot.hasData || !snapshot.data!.success) {
