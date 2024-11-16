@@ -72,12 +72,12 @@ lib/
    - Displays different categories of NBA highlights
    - Clean grid layout with category cards
    - Smooth navigation to detail pages
-<img src="https://github.com/user-attachments/assets/f8930087-b682-459e-8a2f-b0eeb59c8540" alt="IMG_7029" width="30%">
-<img src="https://github.com/user-attachments/assets/807df89f-7f3c-45eb-bd7d-ec24977ca9c3" alt="IMG_7029" width="35%">
+<img src="https://github.com/user-attachments/assets/f8930087-b682-459e-8a2f-b0eeb59c8540" alt="IMG_7029" width="20%">
+<img src="https://github.com/user-attachments/assets/807df89f-7f3c-45eb-bd7d-ec24977ca9c3" alt="IMG_7029" width="20%">
 
 
-<img src="https://github.com/user-attachments/assets/37f8d169-c76c-4261-a8ae-27b82e2ff206" alt="IMG_7029" width="30%">
-<img src="https://github.com/user-attachments/assets/52cce689-8b14-4558-9ff3-0d4ab971bf37" alt="IMG_7029" width="30%">
+<img src="https://github.com/user-attachments/assets/37f8d169-c76c-4261-a8ae-27b82e2ff206" alt="IMG_7029" width="20%">
+<img src="https://github.com/user-attachments/assets/52cce689-8b14-4558-9ff3-0d4ab971bf37" alt="IMG_7029" width="20%">
 
 
 
@@ -86,17 +86,11 @@ lib/
    - Video thumbnail with play button
    - Detailed information including duration and views
    - Tag system for better content organization
-<img src="https://github.com/user-attachments/assets/817c7b14-7f7b-41ee-8a1a-1586d436ea79" alt="IMG_7029" width="35%">
-<img src="https://github.com/user-attachments/assets/75b69031-f942-4005-829b-07b58b90003c" alt="IMG_7029" width="35%">
-<img src="https://github.com/user-attachments/assets/7f87f2f7-1242-43be-af25-2d354b4454e6" alt="IMG_7029" width="35%">
-<img src="https://github.com/user-attachments/assets/e3695a6b-c3cd-4346-b28c-640701f2f19d" alt="IMG_7029" width="35%">
-<img src="https://github.com/user-attachments/assets/25e7ea2f-6b45-4fa3-929d-2c59975445e7" alt="IMG_7029" width="35%">
-
-
-<img width="211" alt="image" src="https://github.com/user-attachments/assets/75b69031-f942-4005-829b-07b58b90003c">
-<img width="197" alt="image" src="https://github.com/user-attachments/assets/7f87f2f7-1242-43be-af25-2d354b4454e6">
-<img width="210" alt="image" src="https://github.com/user-attachments/assets/e3695a6b-c3cd-4346-b28c-640701f2f19d">
-<img width="203" alt="image" src="https://github.com/user-attachments/assets/25e7ea2f-6b45-4fa3-929d-2c59975445e7">
+<img src="https://github.com/user-attachments/assets/817c7b14-7f7b-41ee-8a1a-1586d436ea79" alt="IMG_7029" width="20%">
+<img src="https://github.com/user-attachments/assets/75b69031-f942-4005-829b-07b58b90003c" alt="IMG_7029" width="20%">
+<img src="https://github.com/user-attachments/assets/7f87f2f7-1242-43be-af25-2d354b4454e6" alt="IMG_7029" width="20%">
+<img src="https://github.com/user-attachments/assets/e3695a6b-c3cd-4346-b28c-640701f2f19d" alt="IMG_7029" width="20%">
+<img src="https://github.com/user-attachments/assets/25e7ea2f-6b45-4fa3-929d-2c59975445e7" alt="IMG_7029" width="20%">
 
 
 
