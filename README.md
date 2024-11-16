@@ -1,21 +1,125 @@
-<<<<<<< HEAD
-# Project-14---BNA-Highlights-Moble-App
-This is a cross-platform app (Web, IOS, Android) about daily NBA Highlights. Using Flutter framwork.
-=======
-# nba_highlights
+# NBA Highlights Mobile App
 
-A new Flutter project.
+A Flutter mobile application that showcases NBA game highlights, player highlights, dunk contests, and classic games.
 
-## Getting Started
+## Setup Process
 
-This project is a starting point for a Flutter application.
+1. **Prerequisites**
+   - Flutter SDK (latest version)
+   - Dart SDK
+   - Android Studio / Xcode
+   - A code editor (VS Code recommended)
 
-A few resources to get you started if this is your first Flutter project:
+2. **Installation**
+   ```bash
+   # Clone the repository
+   git clone [repository-url]
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+   # Navigate to project directory
+   cd nba_highlights
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
->>>>>>> 3bd8e7e (initial commit)
+   # Install dependencies
+   flutter pub get
+
+   # Run the app
+   flutter run
+   ```
+
+## Libraries Used
+
+1. **HTTP Client**
+   - `http`: For making API requests to fetch highlight data
+   - Used for communication with the NBA highlights API
+
+2. **State Management & Navigation**
+   - `go_router`: For handling navigation between screens
+   - Provides a clean, URL-based navigation system
+
+3. **UI Components & Styling**
+   - `shimmer`: For loading state animations
+   - `cached_network_image`: For efficient image loading and caching
+   - Improves user experience with smooth loading states and image handling
+
+## Project Structure
+
+```
+lib/
+├── core/
+│   ├── constants/
+│   ├── services/
+│   ├── theme/
+│   └── utils/
+├── features/
+│   ├── details/
+│   │   ├── data/
+│   │   ├── domain/
+│   │   └── presentation/
+│   ├── home/
+│   │   ├── data/
+│   │   ├── domain/
+│   │   └── presentation/
+│   └── splash/
+└── main.dart
+```
+
+- **Core**: Contains application-wide utilities, services, and constants
+- **Features**: Organized by feature modules following clean architecture principles
+  - Each feature has its own data, domain, and presentation layers
+
+## Key Features
+
+1. **Home Screen**
+   - Displays different categories of NBA highlights
+   - Clean grid layout with category cards
+   - Smooth navigation to detail pages
+
+2. **Details Screen**
+   - Shows list of highlights for selected category
+   - Video thumbnail with play button
+   - Detailed information including duration and views
+   - Tag system for better content organization
+
+## Development Challenges & Solutions
+
+1. **API Integration Challenges**
+   - **Challenge**: The NBA highlights API endpoints were not consistently available
+   - **Solution**: Implemented mock data system to ensure consistent content display and testing
+   - **Impact**: Enabled development to continue without API dependencies
+
+2. **Category Navigation**
+   - **Challenge**: Different types of highlights required different data handling approaches
+   - **Solution**: Created a unified system that handles both individual highlights and category-based content
+   - **Impact**: Seamless user experience across different content types
+
+3. **Image Loading & Performance**
+   - **Challenge**: Loading high-quality images while maintaining performance
+   - **Solution**: Implemented CachedNetworkImage with shimmer loading effects
+   - **Impact**: Smooth image loading with fallback states
+
+4. **State Management**
+   - **Challenge**: Managing loading, error, and success states across screens
+   - **Solution**: Implemented robust error handling and loading states
+   - **Impact**: Better user feedback and error recovery
+
+## Future Improvements
+
+1. **Video Playback**
+   - Implement actual video playback functionality
+   - Add support for different video quality options
+
+2. **Offline Support**
+   - Add local caching for recently viewed highlights
+   - Implement offline mode for saved content
+
+3. **User Features**
+   - Add user authentication
+   - Implement favorites and watch later lists
+   - Add social sharing capabilities
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
