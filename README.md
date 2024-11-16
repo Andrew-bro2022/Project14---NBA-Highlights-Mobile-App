@@ -72,12 +72,20 @@ lib/
    - Displays different categories of NBA highlights
    - Clean grid layout with category cards
    - Smooth navigation to detail pages
+<img src="https://github.com/user-attachments/assets/f8930087-b682-459e-8a2f-b0eeb59c8540" alt="IMG_7029" width="80%">
+<img src="https://github.com/user-attachments/assets/807df89f-7f3c-45eb-bd7d-ec24977ca9c3" alt="IMG_7029" width="80%">
+<img src="https://github.com/user-attachments/assets/0cce8631-23da-4c61-9fa4-47609bc6efda" alt="IMG_7029" width="80%">
+
 
 2. **Details Screen**
    - Shows list of highlights for selected category
    - Video thumbnail with play button
    - Detailed information including duration and views
    - Tag system for better content organization
+<img src="" alt="IMG_7029" width="80%">
+<img src="" alt="IMG_7029" width="80%">
+<img src="" alt="IMG_7029" width="80%">
+<img src="" alt="IMG_7029" width="80%">
 
 ## Development Challenges & Solutions
 
