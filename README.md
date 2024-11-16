@@ -82,10 +82,11 @@ lib/
    - Video thumbnail with play button
    - Detailed information including duration and views
    - Tag system for better content organization
-<img src="" alt="IMG_7029" width="80%">
-<img src="" alt="IMG_7029" width="80%">
-<img src="" alt="IMG_7029" width="80%">
-<img src="" alt="IMG_7029" width="80%">
+<img src="https://github.com/user-attachments/assets/88ccb7c1-f0d7-460e-a0c0-ade177ac0efc" alt="IMG_7029" width="30%">
+<img src="https://github.com/user-attachments/assets/b0e4d9fe-c5f4-4541-9e34-d8460026ca73" alt="IMG_7029" width="30%">
+<img src="https://github.com/user-attachments/assets/249ebcb3-a1c1-4edd-9c5a-e3f9dfbdeed6" alt="IMG_7029" width="30%">
+<img src="https://github.com/user-attachments/assets/2ab9f8e8-91ef-4143-8402-27b1f8f7bfe0" alt="IMG_7029" width="30%">
+
 
 ## Development Challenges & Solutions
 
