@@ -12,6 +12,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   late final ApiService _apiService;
+  String _selectedCategoryId = '1361'; // Default to Game Highlights
 
   final List<Map<String, String>> categories = [
     {
@@ -56,46 +57,119 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       body: SafeArea(
-        child: CustomScrollView(
-          slivers: [
-            SliverPadding(
-              padding: const EdgeInsets.all(16.0),
-              sliver: SliverToBoxAdapter(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Categories',
-                      style: Theme.of(context).textTheme.displayMedium,
+        child: Stack(
+          children: [
+            CustomScrollView(
+              slivers: [
+                SliverPadding(
+                  padding: const EdgeInsets.all(16.0),
+                  sliver: SliverToBoxAdapter(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Categories',
+                          style: Theme.of(context).textTheme.displayMedium,
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          'Watch the best NBA moments',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                      ],
                     ),
-                    const SizedBox(height: 8),
-                    Text(
-                      'Watch the best NBA moments',
-                      style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                ),
+                SliverPadding(
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 80),
+                  sliver: SliverGrid(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 16,
+                      mainAxisSpacing: 16,
+                      childAspectRatio: 0.8,
+                    ),
+                    delegate: SliverChildBuilderDelegate(
+                      (context, index) {
+                        final category = categories[index];
+                        return CategoryCard(
+                          title: category['title'] ?? '',
+                          imageUrl: category['imageUrl'] ?? '',
+                          onTap: () {
+                            setState(() {
+                              _selectedCategoryId = category['id'] ?? '1361';
+                            });
+                            context.go('/details/${category['id']}');
+                          },
+                        );
+                      },
+                      childCount: categories.length,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Positioned(
+              left: 0,
+              right: 0,
+              bottom: 0,
+              child: Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      blurRadius: 8,
+                      offset: const Offset(0, -2),
                     ),
                   ],
                 ),
-              ),
-            ),
-            SliverPadding(
-              padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-              sliver: SliverGrid(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 16,
-                  mainAxisSpacing: 16,
-                  childAspectRatio: 0.8,
-                ),
-                delegate: SliverChildBuilderDelegate(
-                  (context, index) {
-                    final category = categories[index];
-                    return CategoryCard(
-                      title: category['title'] ?? '',
-                      imageUrl: category['imageUrl'] ?? '',
-                      onTap: () => context.go('/details/${category['id']}'),
-                    );
-                  },
-                  childCount: categories.length,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                        decoration: BoxDecoration(
+                          color: Theme.of(context).primaryColor.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(
+                            color: Theme.of(context).primaryColor.withOpacity(0.2),
+                          ),
+                        ),
+                        child: DropdownButton<String>(
+                          value: _selectedCategoryId,
+                          isExpanded: true,
+                          underline: const SizedBox(),
+                          icon: Icon(
+                            Icons.arrow_drop_down,
+                            color: Theme.of(context).primaryColor,
+                          ),
+                          items: categories.map((category) {
+                            return DropdownMenuItem(
+                              value: category['id'],
+                              child: Text(
+                                category['title'] ?? '',
+                                style: TextStyle(
+                                  color: _selectedCategoryId == category['id']
+                                      ? Theme.of(context).primaryColor
+                                      : Colors.black87,
+                                ),
+                              ),
+                            );
+                          }).toList(),
+                          onChanged: (categoryId) {
+                            if (categoryId != null && categoryId != _selectedCategoryId) {
+                              setState(() {
+                                _selectedCategoryId = categoryId;
+                              });
+                              context.go('/details/$categoryId');
+                            }
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
