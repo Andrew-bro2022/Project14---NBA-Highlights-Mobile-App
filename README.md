@@ -86,11 +86,18 @@ lib/
    - Video thumbnail with play button
    - Detailed information including duration and views
    - Tag system for better content organization
-<img src="https://github.com/user-attachments/assets/88ccb7c1-f0d7-460e-a0c0-ade177ac0efc" alt="IMG_7029" width="35%">
-<img src="https://github.com/user-attachments/assets/b0e4d9fe-c5f4-4541-9e34-d8460026ca73" alt="IMG_7029" width="35%">
+<img src="https://github.com/user-attachments/assets/817c7b14-7f7b-41ee-8a1a-1586d436ea79" alt="IMG_7029" width="35%">
+<img src="https://github.com/user-attachments/assets/75b69031-f942-4005-829b-07b58b90003c" alt="IMG_7029" width="35%">
+<img src="https://github.com/user-attachments/assets/7f87f2f7-1242-43be-af25-2d354b4454e6" alt="IMG_7029" width="35%">
+<img src="https://github.com/user-attachments/assets/e3695a6b-c3cd-4346-b28c-640701f2f19d" alt="IMG_7029" width="35%">
+<img src="https://github.com/user-attachments/assets/25e7ea2f-6b45-4fa3-929d-2c59975445e7" alt="IMG_7029" width="35%">
 
-<img src="https://github.com/user-attachments/assets/249ebcb3-a1c1-4edd-9c5a-e3f9dfbdeed6" alt="IMG_7029" width="35%">
-<img src="https://github.com/user-attachments/assets/2ab9f8e8-91ef-4143-8402-27b1f8f7bfe0" alt="IMG_7029" width="35%">
+
+<img width="211" alt="image" src="https://github.com/user-attachments/assets/75b69031-f942-4005-829b-07b58b90003c">
+<img width="197" alt="image" src="https://github.com/user-attachments/assets/7f87f2f7-1242-43be-af25-2d354b4454e6">
+<img width="210" alt="image" src="https://github.com/user-attachments/assets/e3695a6b-c3cd-4346-b28c-640701f2f19d">
+<img width="203" alt="image" src="https://github.com/user-attachments/assets/25e7ea2f-6b45-4fa3-929d-2c59975445e7">
+
 
 
 ## Development Challenges & Solutions
